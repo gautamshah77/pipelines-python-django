@@ -43,7 +43,7 @@ steps:
   inputs:
     testResultsFiles: "**/TEST-*.xml"
     testRunTitle: 'Python $(PYTHON_VERSION)'
-- task: PythonScript@3
+- task: PythonScript@0
   inputs:
     targetType: 'inline'
     script: |
