@@ -45,5 +45,5 @@ steps:
     testRunTitle: 'Python $(PYTHON_VERSION)'
 - task: CondaEnvironment@0
   inputs:
-    environmentName: 'myEnvironment'
+    environmentName: 'sampleEnvironment1'
     packageSpecs: 'python=3'
