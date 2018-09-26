@@ -43,3 +43,7 @@ steps:
   inputs:
     testResultsFiles: "**/TEST-*.xml"
     testRunTitle: 'Python $(PYTHON_VERSION)'
+- task: CondaEnvironment@0
+  inputs:
+    environmentName: 'myEnvironment'
+    packageSpecs: 'python=3'
