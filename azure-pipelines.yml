@@ -38,8 +38,14 @@ steps:
     python manage.py test --testrunner xmlrunner.extra.djangotestrunner.XMLTestRunner --no-input
   condition: succeededOrFailed()
   displayName: 'Run tests'
-
+ 
 - task: PublishTestResults@2
   inputs:
     testResultsFiles: "**/TEST-*.xml"
     testRunTitle: 'Python $(PYTHON_VERSION)'
+- task: PythonScript@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      print('Hello world 1')
+      print('Hello world 2')
